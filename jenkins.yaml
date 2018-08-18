@@ -1,3 +1,8 @@
+
+plugins:
+  required:
+    timestamper: "http://updates.jenkins-ci.org/download/plugins/timestamper/1.8.9/timestamper.hpi"
+    ansicolor: "http://updates.jenkins-ci.org/download/plugins/ansicolor/0.5.2/ansicolor.hpi"
 jenkins:
   globalNodeProperties:
     - envVars:
