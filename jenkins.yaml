@@ -56,5 +56,47 @@ credentials:
                   Uz0XWGMnS1TTkchrh1Zs5FAzOakys5M5pKwdiy3lL389gXF5fkVz5qs=
                   -----END RSA PRIVATE KEY-----
             username: sushil.nagi
-
-
+unclassified:
+  sonarglobalconfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - name: "SONAR-main"
+      serverUrl: "https://sonar.sandbox.extranet.group"
+      serverVersion: "5.1"
+      sonarLogin: "admin"
+      sonarPassword: "Sapient#2015"
+      databaseUrl: "jdbc:mysql://10.113.140.182:3306/sonarzap?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance"
+      databaseLogin: "sonarzap"
+      databasePassword: "Pings&1010"
+  globallibraries:
+    libraries:
+      - name: workflowlib-global
+        defaultVersion: master
+        implicit: true
+        allowVersionOverride: true
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: http://gerrit.sandbox.extranet.group/devops-pipeline-workflowlib-global
+                credentialsId: gerrit-http-snagi
+      - name: workflowlib-sandbox
+        defaultVersion: master
+        implicit: true
+        allowVersionOverride: true
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: http://gerrit.sandbox.extranet.group/devops-pipeline-workflowlib-sandbox
+                credentialsId: gerrit-http-snagi
+      - name: cb-pipeline-lib
+        defaultVersion: master
+        implicit: true
+        allowVersionOverride: true
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: git@github.lbg.eu-gb.bluemix.net:POC28-CommercialServicing/cb-devops-pipeline-libs.git
+                credentialsId: git-ssh-snagi
