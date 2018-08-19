@@ -4,6 +4,15 @@ jenkins:
         env:
           - key: TEST
             value: TESTING
+  clouds:
+  - kubernetes:
+      containerCapStr: "0"
+      jenkinsTunnel: "jenkins-agent:50000"
+      jenkinsUrl: "http://jenkins:8080"
+      maxRequestsPerHostStr: "32"
+      name: "kube-prod"
+      namespace: "jx"
+      serverUrl: "https://kubernetes.default"
 credentials:
   system:
     domainCredentials:
