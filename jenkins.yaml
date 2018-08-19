@@ -57,6 +57,17 @@ credentials:
                   -----END RSA PRIVATE KEY-----
             username: sushil.nagi
 unclassified:
+  sonarglobalconfiguration:
+    buildWrapperEnabled: true
+    installations:
+    - name: "SONAR-main"
+      serverUrl: "https://sonar.sandbox.extranet.group"
+      serverVersion: "5.1"
+      sonarLogin: "admin"
+      sonarPassword: "Sapient#2015"
+      databaseUrl: "jdbc:mysql://10.113.140.182:3306/sonarzap?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance"
+      databaseLogin: "sonarzap"
+      databasePassword: "Pings&1010"
   globallibraries:
     libraries:
       - name: workflowlib-global
