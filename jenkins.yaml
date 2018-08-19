@@ -1,9 +1,4 @@
 jenkins:
-  globalNodeProperties:
-    - envVars:
-        env:
-          - key: TEST
-            value: TESTING
   clouds:
   - kubernetes:
       containerCapStr: "0"
