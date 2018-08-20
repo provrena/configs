@@ -14,6 +14,11 @@ credentials:
       - credentials:
         - usernamePassword:
             scope:    GLOBAL
+            id:       poc28.gheuser.bluemix
+            username: sushil.nagi
+            password: Pass1808
+        - usernamePassword:
+            scope:    GLOBAL
             id:       ghe-token-snagi
             username: sushil.nagi
             password: 84e4e17dae47f9a6215620c766a46873b07bb54e
